@@ -1,0 +1,38 @@
+{
+  "name": "ra-data-warthog",
+  "version": "0.0.1",
+  "description": "Warthog data provider for react-admin",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "*.md",
+    "lib",
+    "esm",
+    "src"
+  ],
+  "authors": [
+    "Dan Caddigan"
+  ],
+  "repository": "goldcaddy77/ra-data-warthog",
+  "homepage": "https://github.com/goldcaddy77/ra-data-warthog#readme",
+  "bugs": "https://github.com/goldcaddy77/ra-data-warthog/issues",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run build-cjs && yarn run build-esm",
+    "build-cjs": "rimraf ./lib && tsc",
+    "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
+    "watch": "tsc --outDir esm --module es2015 --watch"
+  },
+  "dependencies": {
+    "graphql-ast-types-browser": "^1.0.2",
+    "query-string": "^5.1.1",
+    "ra-core": "^3.5.3",
+    "ra-data-graphql": "^3.4.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.9.3"
+  }
+}
